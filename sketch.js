@@ -165,8 +165,8 @@ function Astronaut(launchDate, name, title, country) {
         ellipse(mouseX,mouseY,60);
 
       } else if (mouseButton == 'right') {
-        text(this.name, this.x, this.y + this.radius / 8 + 5);
-          background(255,200,99)
+        //text(this.name, this.x, this.y + this.radius / 8 + 5);
+          //background(255,200,99)
     }
     }
 
