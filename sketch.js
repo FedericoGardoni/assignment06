@@ -6,7 +6,7 @@ var rus;
 var usa;
 var nazione;
 var morto = false;
-
+var vita = 3;
 
 function preload() {
   myData = loadJSON('assets/peopleinspace.json');
@@ -16,7 +16,7 @@ function preload() {
 }
 
 function setup() {
-  var vita = 3;
+ 
   createCanvas(500, 500);
 
   //print(myData);
@@ -64,11 +64,20 @@ function draw() {
   text("Astronauts are falling on earth!", 480, 470);
   text("More days on space --> More chance", 480, 490)
   pop()
+  
+  
+    push();
+    fill(255, 100, 100);
+    textSize(23);
+    textStyle(BOLD);
+    textAlign(LEFT);
+    text("Vite: " + vita, 20, 480);
+    pop();
 
 }
 
 function Astronaut(launchDate, name, title, country) {
-  var vita = 3;
+ 
   this.name = name;
   this.title = title;
   this.country = country;
@@ -144,13 +153,7 @@ function Astronaut(launchDate, name, title, country) {
     }
     
 
-    push();
-    fill(255, 100, 100);
-    textSize(23);
-    textStyle(BOLD);
-    textAlign(LEFT);
-    text("Vite: " + vita, 20, 480);
-    pop();
+  
 
 
     if (mouseIsPressed) {
